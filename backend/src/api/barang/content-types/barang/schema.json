@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "barangs",
+  "info": {
+    "singularName": "barang",
+    "pluralName": "barangs",
+    "displayName": "barang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NamaBarang": {
+      "type": "string",
+      "required": true
+    },
+    "JenisBarang": {
+      "type": "string",
+      "required": true
+    },
+    "StokBarang": {
+      "type": "integer",
+      "required": true
+    },
+    "HargaBarang": {
+      "type": "integer",
+      "required": true
+    },
+    "Supplayer": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
