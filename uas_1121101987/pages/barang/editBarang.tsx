@@ -94,73 +94,67 @@ const EditBarangModal: React.FC<ShowModalProps> = ({
       style={customModal}
     >
       <div>
-        <h2 className="text-3xl text-teal-500 py-2">Edit Mahasiswa</h2>
+        <h2 className="modal-title">Edit Mahasiswa</h2>
         <form onSubmit={handleSubmit}>
-          <label className="text-xl text-teal-500 py-2">
+          <label className="form-label">
             Nama Barang:
             <input
               type="text"
               name="NamaBarang"
               value={formData.NamaBarang}
               onChange={handleChange}
-              className="border-2 border-teal-500"
+              className="form-input"
             />
           </label>
           <br />
-          <label className="text-xl text-teal-500 py-2">
+          <label className="form-label">
             Jenis Barang:
             <input
               type="text"
               name="JenisBarang"
               value={formData.JenisBarang}
               onChange={handleChange}
-              className="border-2 border-teal-500"
+              className="form-input"
             />
           </label>
           <br />
-          <label className="text-xl text-teal-500 py-2">
+          <label className="form-label">
             Stok Barang:
             <input
               type="number"
               name="StokBarang"
               value={formData.StokBarang}
               onChange={handleChange}
-              className="border-2 border-teal-500"
+              className="form-input"
             />
           </label>
           <br />
-          <label className="text-xl text-teal-500 py-2">
+          <label className="form-label">
             Harga Barang:
             <input
               type="number"
               name="HargaBarang"
               value={formData.HargaBarang}
               onChange={handleChange}
-              className="border-2 border-teal-500"
+              className="form-input"
             />
           </label>
           <br />
-          <label className="text-xl text-teal-500 py-2">
+          <label className="form-label">
             Supplayer:
             <input
               type="text"
               name="Supplayer"
               value={formData.Supplayer}
               onChange={handleChange}
-              className="border-2 border-teal-500"
+              className="form-input"
             />
           </label>
           <br />
-          <button
-            onClick={closeModal}
-            className="btn btn-red text-xl text-teal-500 py-2"
-          >
+          <button onClick={closeModal} className="btn btn-red">
             Tutup
           </button>
-          <button
-            type="submit"
-            className="btn btn-blue text-xl text-teal-500 py-2"
-          >
+          <button type="submit" className="btn btn-blue">
             Simpan
           </button>
         </form>

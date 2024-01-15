@@ -72,23 +72,15 @@ const DeleteBarangModal: React.FC<ShowModalProps> = ({
       style={customModal}
     >
       <div className="modal-box">
-        <h3 className="font-bold text-lg text-teal-500 py-2">
+        <h3 className="modal-title">
           Apakah Anda Yakin Akan Menghapus
-          <span className="text-red-700"> {data?.attributes.NamaBarang} ?</span>
+          <span className="delete"> {data?.attributes.NamaBarang} ?</span>
         </h3>
         <div className="modal-action">
-          <button
-            type="button"
-            className="btn-yellow text-xl text-teal-500 py-2"
-            onClick={closeModal}
-          >
+          <button type="button" className="btn-yellow" onClick={closeModal}>
             Cencel
           </button>
-          <button
-            type="button"
-            onClick={handleDelete}
-            className="btn btn-red text-xl text-teal-500 py-2"
-          >
+          <button type="button" onClick={handleDelete} className="btn btn-red">
             Delete
           </button>
         </div>

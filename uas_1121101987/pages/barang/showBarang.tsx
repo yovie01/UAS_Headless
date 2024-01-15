@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "react-modal";
-import { getBarangid } from ".";
 
 interface ShowModalProps {
   isOpen: boolean;
@@ -67,26 +66,23 @@ const ShowBarangModal: React.FC<ShowModalProps> = ({
     >
       {data && (
         <div>
-          <h2 className="text-3xl text-teal-500 py-2">Detail Barang</h2>
-          <p className="text-xl text-teal-500 py-2">
-            Nama Barang: {data.attributes.NamaBarang}
-          </p>
-          <p className="text-xl text-teal-500 py-2">
-            Jenis Barang: {data.attributes.JenisBarang}
-          </p>
-          <p className="text-xl text-teal-500 py-2">
-            Stok Barang: {data.attributes.StokBarang}
-          </p>
-          <p className="text-xl text-teal-500 py-2">
-            Harga Barang: {data.attributes.HargaBarang}
-          </p>
-          <p className="text-xl text-teal-500 py-2">
-            Supplayer: {data.attributes.Supplayer}
-          </p>
-          <button
-            className="btn btn-red text-xl text-teal-500 py-2"
-            onClick={closeModal}
-          >
+          <h2 className="modal-title">Detail Barang</h2>
+          <div className="text-xl text-teal-500 py-2">
+            Nama Barang: <span>{data.attributes.NamaBarang}</span>
+          </div>
+          <div className="text-xl text-teal-500 py-2">
+            Jenis Barang: <span>{data.attributes.JenisBarang}</span>
+          </div>
+          <div className="text-xl text-teal-500 py-2">
+            Stok Barang: <span>{data.attributes.StokBarang}</span>
+          </div>
+          <div className="text-xl text-teal-500 py-2">
+            Harga Barang: <span>{data.attributes.HargaBarang}</span>
+          </div>
+          <div className="text-xl text-teal-500 py-2">
+            Supplayer: <span>{data.attributes.Supplayer}</span>
+          </div>
+          <button className="btn btn-red" onClick={closeModal}>
             Tutup
           </button>
         </div>

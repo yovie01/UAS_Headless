@@ -104,33 +104,29 @@ export default function Page() {
   };
 
   return (
-    <div className="container p-3">
-      <div className="container flex-col my-4">
-        <h1 className="text-5xl text-teal-500 pb-2">Daftar Barang</h1>
-        <button className="btn btn-primary" onClick={() => handleCreate()}>
+    <div className="container">
+      <div className="box-title">
+        <h1 className="title">Daftar Barang</h1>
+        <button className="btn btn-green" onClick={() => handleCreate()}>
           Tambah Data Barang
         </button>
       </div>
 
-      <div className="container">
-        <table className="table table-auto border-collapse border border-slate-200 w-2/3">
+      <div className="container p-3">
+        <table className="table-main">
           <thead>
             <tr>
-              <th className="border border-slate-600 p-2">Nama Barang</th>
-              <th className="border border-slate-600 p-2">Jenis Barang</th>
-              <th className="border border-slate-600 p-2"></th>
+              <th className="table-header">Nama Barang</th>
+              <th className="table-header">Jenis Barang</th>
+              <th className="table-header"></th>
             </tr>
           </thead>
           <tbody>
             {data.map((barang) => (
               <tr key={barang.id}>
-                <td className="border border-slate-700 p-2">
-                  {barang.attributes.NamaBarang}
-                </td>
-                <td className="border border-slate-700 p-2">
-                  {barang.attributes.JenisBarang}
-                </td>
-                <td className="flex justify-around border border-slate-700 p-2">
+                <td className="table-data">{barang.attributes.NamaBarang}</td>
+                <td className="table-data">{barang.attributes.JenisBarang}</td>
+                <td className="flex justify-around table-data">
                   <button
                     className="btn btn-blue"
                     onClick={() => handleShow(barang.id)}
